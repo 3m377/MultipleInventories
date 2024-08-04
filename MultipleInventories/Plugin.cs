@@ -27,12 +27,12 @@ public class Plugin : Plugin<Config>
         Player.Spawned += EventHandler.Spawned;
         Player.Dying += EventHandler.Dying;
         Player.ItemAdded += EventHandler.ItemAdded;
-        Player.DroppedItem += EventHandler.DroppedItem;
+        Player.ItemRemoved += EventHandler.ItemRemoved;
     }
 
     public override void OnDisabled()
     {
-        Player.DroppedItem -= EventHandler.DroppedItem;
+        Player.ItemRemoved -= EventHandler.ItemRemoved;
         Player.ItemAdded -= EventHandler.ItemAdded;
         Player.Dying -= EventHandler.Dying;
         Player.Spawned -= EventHandler.Spawned;

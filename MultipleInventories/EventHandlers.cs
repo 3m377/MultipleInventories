@@ -58,7 +58,7 @@ public class EventHandlers
 		Plugin.Singleton.CurrentInventory[ev.Player].Save(ev.Player);
 	}
 
-	public void DroppedItem(DroppedItemEventArgs ev)
+	public void ItemRemoved(ItemRemovedEventArgs ev)
 	{
         Plugin.Singleton.CurrentInventory[ev.Player].Save(ev.Player);
     }
